@@ -28,6 +28,16 @@ cd simple-lambda-nodejs-api
 serverless deploy
 ```
 
+To run the example unit test with mocha run:
+
+```
+npm install
+```
+
+```
+npm test
+```
+
 To remove the AWS resources that were create run:
 
 ```
@@ -40,5 +50,6 @@ Reduce management of servers for installing security patches etc
 Easier to manage scaling as largely it is built in
 
 ## How to extend / scale this example
-A typical expansion would be to add a new endpoint and add a
+A typical expansion would be to add a new endpoint pointing to a different function.  
+Add unit tests as you scale  
 I plan to add advanced branch with some more details...

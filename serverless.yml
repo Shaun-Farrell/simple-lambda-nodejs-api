@@ -12,6 +12,10 @@
 # Happy Coding!
 
 service: aws-nodejs # NOTE: update this with your service name
+package:
+  individually: true
+  exclude:
+    - ".*/**"
 
 provider:
   name: aws
@@ -35,6 +39,10 @@ functions:
   football-get:
     handler: handler.main
     timeout: 15
+    package:
+      include:
+        - handler.js
+        - results.js
     # The `events` block defines how to trigger the handler.helloWorld code
     events:
       - http:
