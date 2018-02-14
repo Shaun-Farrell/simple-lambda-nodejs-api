@@ -19,10 +19,20 @@ provider:
   stage: dev
   region: eu-west-1
   memorySize: 128
+  # apiKeys:
+  #   - myAPIKey
+  # usagePlan:
+  #   quota:
+  #     limit: 500
+  #     offset: 0
+  #     period: DAY
+  #   throttle:
+  #     burstLimit: 10
+  #     rateLimit: 10
 
 # The `functions` block defines what code to deploy
 functions:
-  football-api:
+  football-get:
     handler: handler.main
     timeout: 15
     # The `events` block defines how to trigger the handler.helloWorld code
@@ -31,3 +41,4 @@ functions:
           path: results
           method: get
           cors: true
+          # private: true
